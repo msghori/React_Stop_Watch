@@ -21,11 +21,16 @@ useEffect(()=>{
   return (
     <>
       <div className='text-center'>
-      <div className='flex flex-row justify-center mt-50 mb-5  text-6xl'>
-        <h1  className=''>StopWatch: <span> {("0" + Math.floor((time / 60000) % 60)).slice(-2)}: </span>
-          <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}: </span>
-          <span>{("0" + Math.floor((time / 10) % 100)).slice(-2)}</span> </h1>
-          </div>
+        <div className='flex flex-row justify-center mt-50 mb-5  text-3xl'>
+          <h1  className=''>Stopwatch  </h1>
+        </div>
+        <div className='flex flex-row justify-center  mb-5  text-2xl'>
+          <h2>
+          <span> {("0" + Math.floor((time / 60000) % 60)).slice(-2)}: </span>
+            <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}: </span>
+            <span>{("0" + Math.floor((time / 10) % 100)).slice(-2)}</span>
+          </h2>
+        </div>
         <div  className=''>
         <button className='text-white bg-green-500 hover:bg-green-700 rounded ordinal  py-2 px-4 mr-2 cursor-pointer focus:ring-4 focus:ring-green-300' onClick={() => setRunning(true)}>Start </button>
         <button className='text-white bg-orange-500 hover:bg-orange-700 rounded py-2 px-4 mr-2 cursor-pointer focus:ring-4 focus:ring-orange-300' onClick={() => setRunning(false)}>Stop </button>
